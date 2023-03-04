@@ -26,6 +26,7 @@ export class GcpTranslatev3Service {
   }
 
   constructor(private readonly gcloudStorage: GcpStorageService) {
+    console.log(this.CONFIG)
     this.isHaveAuthKey =
       !!process.env.GOOGLE_AUTH_CLIENT_EMAIL &&
       !!process.env.GOOGLE_AUTH_PRIVATE_KEY &&
